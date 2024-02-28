@@ -1,0 +1,91 @@
+/* -------------------------------------- */
+/* ---------------- Menu ---------------- */
+/* -------------------------------------- */
+
+.menu-flex-wrapper {
+    padding-bottom: 20px;
+    padding-top: 80px;
+    margin-bottom: 0px;
+    margin-top: -30px;
+  }
+  
+  .menu-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 1.5rem;
+    background-color: rgb(109, 127, 138, 0.2);
+    color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 10px;
+  }
+  
+  .menu {
+    font-family: "David Libre", serif;
+    font-size: 16px;
+  }
+  
+  .menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+  }
+  
+  .menu-item {
+    display: flex;
+  }
+  
+  .menu-item-image {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(85, 82, 82);
+  }
+  
+  .menu-item-text {
+    flex-grow: 1;
+    /* enables whole width of the text */
+  }
+  
+  .menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    /* Adds space between left-side name and right-side price */
+    margin: 0;
+  }
+  
+  .menu-item-name {
+    margin-right: 1.5rem;
+  }
+  
+  .menu-item-description {
+    line-height: 1.5;
+  }
+  
+  /* If screen is more than 992px in size  */
+  @media screen and (min-width: 992px) {
+    .menu {
+      font-size: 20px;
+    }
+    .menu-group {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); /* same as 1fr, 1fr; 2 column taking up total space evenly (2 evenly-sized columns) */
+    }
+    .menu-item-image {
+      width: 150px;
+      height: 150px;
+    }
+  }

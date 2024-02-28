@@ -1,0 +1,262 @@
+/* -------------------------------------- */
+/* ---------------- Main ---------------- */
+/* -------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 23px;
+    line-height: 1.5;
+    background-image: url(../images/menu-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  hr {
+    width: 95%;
+    margin: auto;
+  }
+  
+  .hr-full {
+    width: 100%;
+  }
+  
+  /* ------------------- Slideshow ------------------ */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: -6px;
+  }
+  
+  .slide-img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: -5px;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    padding: 12px;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(54, 52, 52, 0.7);
+  }
+  
+  /* Number text (1/4) */
+  .numbertext {
+    color: #f2f2f2;
+    padding: 8px 12px;
+    position: absolute;
+    top: 60px;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border: solid 1px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  .dot-wrapper {
+    padding: 5px 0 10px 0;
+    height: 65px;
+  }
+  
+  .active,
+  .dot:hover {
+    background-color: #bbb;
+    background-color: #423e3e;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+      font-size: 11px;
+    }
+  }
+  
+  /* -------------- Down arrow -------------------*/
+  .arrow-down {
+    width: 50px;
+    height: 55px;
+    margin-left: -20px;
+    margin-top: 30px;
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+    animation: arrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  .arrow-down:hover {
+    animation-play-state: paused;
+  }
+  
+  .left-arrow-wing {
+    position: absolute;
+    height: 10px;
+    width: 40px;
+    background: black;
+    transform: rotate(240deg);
+    top: 45%;
+    left: 12px;
+    border-radius: 4px;
+    transform-origin: 5px 50%;
+    animation: leftArrow 0.5s 1s infinite ease-out alternate;
+  }
+  .right-arrow-wing {
+    position: absolute;
+    height: 10px;
+    width: 40px;
+    background: black;
+    transform: rotate(-60deg);
+    top: 45%;
+    left: 12px;
+    border-radius: 4px;
+    transform-origin: 5px 50%;
+    animation: rightArrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  @keyframes arrow {
+    0% {
+      bottom: 0px;
+    }
+    100% {
+      bottom: 40px;
+    }
+  }
+  
+  @keyframes leftArrow {
+    0% {
+    }
+    100% {
+      transform: rotate(225deg);
+    }
+  }
+  
+  @keyframes rightArrow {
+    0% {
+    }
+    100% {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  /* -------------- Divider -------------- */
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+  }
+  
+  /* To show the lines on right 
+  and left sides of the text */
+  .divider::after,
+  .divider::before {
+    content: "";
+    border: 1px solid black;
+    flex: 1;
+  }
+  
+  /* Space on left and right sides of text */
+  .divider:not(:empty)::before {
+    margin-right: 0.25em;
+  }
+  
+  .divider:not(:empty)::after {
+    margin-left: 0.25em;
+  }
+  
+  /* -------------- Footer -------------- */
+  .footer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(109, 127, 138, 0.2);
+  }
+  
+  @media screen and (max-width: 992px) {
+    p,
+    td {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    .text,
+    .numbertext {
+      font-size: 20px;
+    }
+  }
